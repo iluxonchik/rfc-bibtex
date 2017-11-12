@@ -20,7 +20,7 @@ in bibtex format. It simply automates the requests that you can do manually from
     usage: rfc-bibtex.py [-h] [-f FILE_NAME] [-o FILE_NAME]
                      [inline_args [inline_args ...]]
 
-    Generate Bibtex entries for RFCs and Internet-Drafts. Titles are output to
+    Generate Bibtex entries for IETF RFCs and Internet-Drafts. Titles are output to
     preserve the original capitalization.
 
     positional arguments:
