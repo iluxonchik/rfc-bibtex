@@ -55,7 +55,7 @@ class RFCBibtex(object):
             try:
                 entry = self.get_bibtex_from_id(id_name)
                 print(entry)
-                print('\n')
+                print('\n', end='')
             except (URLFetchException, BadIDNameException):
                 # error already logged
                 pass
