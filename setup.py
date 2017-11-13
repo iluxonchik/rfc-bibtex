@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
   name = 'rfc-bibtex',
-  packages = ['rfc_bibtex'], # must be the same as the name above
+  packages = ['rfc_bibtex'],
   version = '0.1',
   description = 'Generate Bibtex entries for IETF RFCs and Internet-Drafts.',
   author = 'Illya Gerasymchuk',
