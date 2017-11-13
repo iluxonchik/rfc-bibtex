@@ -17,7 +17,7 @@ should work fine.
 I wrote this tool since I needed to include a lot of RFC referrences in my master thesis
 in bibtex format. It simply automates the requests that you can do manually from [https://sysnetgrp.no-ip.org/rfc/](https://sysnetgrp.no-ip.org/rfc/).
 
-    usage: rfc_bibtex [-h] [-f FILE_NAME] [-o FILE_NAME]
+    usage: rfc-bibtex [-h] [-f FILE_NAME] [-o FILE_NAME]
                      [inline_args [inline_args ...]]
 
     Generate Bibtex entries for IETF RFCs and Internet-Drafts. Titles are output to
