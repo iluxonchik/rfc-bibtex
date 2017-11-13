@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+from rfc_bibtex.rfc_bibtex import run
+
+run()
