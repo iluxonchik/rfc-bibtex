@@ -2,9 +2,10 @@
 import sys, re
 from urllib import request
 import argparse
+import random
 
-from exceptions import BadIDNameException, URLFetchException
-from utils import print_err_red
+from .exceptions import BadIDNameException, URLFetchException
+from .utils import print_err_red
 
 # https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=RFC&number=5246
 # https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=I-D&number=draft-ietf-tls-tls13-21
@@ -23,12 +24,17 @@ class Parser(object):
     def out_file(self):
         return self._out_file
 
+    def print_help(self):
+        self._parser.print_help()
+
+
     def build_parser(self):
             """Setup and return the argument parser."""
             parser = argparse.ArgumentParser(description='Generate Bibtex entries for IETF RFCs and Internet-Drafts. Titles are output to preserve the original capitalization.')
             parser.add_argument('inline_args', nargs='*', help='list of RFC and/or Internet-Draft IDs, in any order.', default=[])
             parser.add_argument('-f', '--file', default=None, metavar='FILE_NAME', nargs=1, help='read list of RFC and/or Internet-Draft IDs (one per line) from a file')
             parser.add_argument('-o', '--output', default=None, metavar='FILE_NAME', nargs=1, help='output the resulting bibtex to a file')
+            self._parser = parser
 
             return parser
 
@@ -50,6 +56,17 @@ class RFCBibtex(object):
     URL_ERROR_MSG = 'Failed to read RFC or Internt-Draft resource'
     ID_TYPE_RFC = 'RFC'
     ID_TYPE_INTERNET_DRAFT = 'I-D'
+    USER_AGENTS = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+                   'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+                   'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38',
+                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Safari/604.1.38',
+                   'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:56.0) Gecko/20100101 Firefox/56.0',
+                   'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:56.0) Gecko/20100101 Firefox/56.0',
+                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+                   'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
+                   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36']
 
     def __init__(self, id_names=[], in_file_name=None, out_file_name=None):
         self._id_names = id_names
@@ -71,7 +88,7 @@ class RFCBibtex(object):
                 try:
                     entry = self.get_bibtex_from_id(id_name)
                     out_file.write(entry)
-                    out_file.write('\n')
+                    out_file.write('\n\n')
                 except (URLFetchException, BadIDNameException):
                     # error already logged
                     pass
@@ -81,6 +98,7 @@ class RFCBibtex(object):
             try:
                 entry = self.get_bibtex_from_id(id_name)
                 print(entry)
+                print('\n')
             except (URLFetchException, BadIDNameException):
                 # error already logged
                 pass
@@ -117,6 +135,7 @@ class RFCBibtex(object):
             self._remote_fetch_err_list += [(id_type, id_name, url)]
             raise URLFetchException()
         response = self._make_title_uppercase(response)
+        response = response.strip()
         return response
 
 
@@ -142,19 +161,26 @@ class RFCBibtex(object):
         return url, id_type, id_name
 
     def _get_response_from_url(self, url):
+        uagent = random.choice(self.USER_AGENTS)
         req = request.Request(
             url,
             data=None,
             headers={
-                'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36'
+                'User-Agent': uagent
             }
         )
         with request.urlopen(url) as response:
             return response.read().decode()
 
-if __name__ == '__main__':
+def run():
     parser = Parser()
-    parser.parse_args()
+    parser = parser.parse_args()
+
+    if len(sys.argv) < 2:
+        parser.print_help()
 
     obj = RFCBibtex(parser.inline_args, parser.in_file, parser.out_file)
     obj.generate_bibtex()
+
+if __name__ == '__main__':
+    run()
