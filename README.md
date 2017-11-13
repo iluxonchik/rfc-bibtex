@@ -3,7 +3,11 @@ A command line tool that creates bibtex entries for IETF RFCs and Internet-Draft
 
 # Installation/Requirements
 
-Simply clone this repository or download the `rfc-bibtex.py`. This tool has no
+You can use `pip` to install this command-line tool:
+
+    pip install rfc-bibtex
+
+Alternatively, you can clone this repository or download the `rfc-bibtex.py`. This tool has no
 external dependencies, so as long as you have `Python 3.x` installed, everything
 should work fine.
 
