@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys, re
+import os, os.path
 from urllib import request
 import random
 
@@ -35,8 +36,32 @@ class RFCBibtex(object):
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
+    @staticmethod
+    def _rfc_key_function(name):
+        """Turn RFC32 into RFC00032 for sorting"""
+        try:
+            if name.startswith('RFC'):
+                return "RFC"+format( int(name[3:]), "05d")
+        except (ValueError,TypeError) as e:
+            pass
+        return name
+
+    latex_citation_re = re.compile(r"^\\citation\{((rfc.*)|(draft-.*))\}",re.I)
     def _read_ids_from_file(self, file_name):
+        """
+        Read identifiers from a text file. 
+        If the text file is a LaTeX .aux file, parse the \citation{} command.
+        If the text file is a LaTeX .tex file, parse the corresponding .aux file
+        """
+        if file_name.endswith(".tex"):
+            file_name_aux = file_name[0:-4] + ".aux"
+            if not os.path.exists(file_name_aux):
+                raise RuntimeError("Run LaTeX on {} to create {}".format(file_name,file_name_aux)) 
+            file_name = file_name_aux
         with open(file_name, 'r') as in_file:
+            if file_name.endswith(".aux"):
+                rfcs = set([m.group(1) for line in in_file for m in [self.latex_citation_re.search(line)] if m])
+                return sorted(rfcs, key=self._rfc_key_function)
             return [line.strip() for line in in_file ]
 
     def _generate_bibtex_to_file(self):
