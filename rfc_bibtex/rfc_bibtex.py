@@ -3,6 +3,7 @@ import sys, re
 import pathlib
 import os, os.path
 from urllib import request
+import urllib.error
 import random
 
 from .exceptions import BadIDNameException, URLFetchException, BadRFCNumberException
@@ -46,8 +47,9 @@ class RFCBibtex(object):
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
+    @staticmethod
     def _rfc_key_function(name):
-        """Turn RFC32 into RFC00032 for sorting"""
+        """Turn RFC32 into RFC00032 for sorting. This needs to be a staticmethod because it is called as a function from sorted()."""
         try:
             if name.upper().startswith('RFC'):
                 return "RFC{:05d}".format( int(name[3:]))
@@ -62,13 +64,13 @@ class RFCBibtex(object):
         If the text file is a LaTeX .tex file, parse the corresponding .aux file
         """
         file_name = pathlib.Path(file_name)
-        if file_name.stem == TEX_EXTENSION:
-            file_name_aux = file_name.parent / (file_name.stem + AUX_EXTENSION)
+        if file_name.stem == self.TEX_EXTENSION:
+            file_name_aux = file_name.parent / (file_name.stem + self.AUX_EXTENSION)
             if not file_name_aux.exists():
                 raise RuntimeError("Run LaTeX on {} to create {}".format(file_name,file_name_aux)) 
             file_name = file_name_aux
         with file_name.open() as in_file:
-            if file_name.suffix == AUX_EXTENSION:
+            if file_name.suffix == self.AUX_EXTENSION:
                 rfcs = set([m.group(1) for line in in_file for m in [self.LATEX_CITATION_RE.search(line)] if m])
                 return sorted(rfcs, key=self._rfc_key_function)
             return [line.strip() for line in in_file ]
@@ -111,7 +113,10 @@ class RFCBibtex(object):
 
     def get_bibtex_from_id(self, id_name):
         url, id_type, id_name = self._get_url_from_id_name(id_name)
-        response = self._get_response_from_url(url)
+        try:
+            response = self._get_response_from_url(url)
+        except urllib.error.HTTPError:
+            raise RuntimeError("bad url: "+url)
         if response.startswith(self.URL_ERROR_MSG):
             self._remote_fetch_err_list += [(id_type, id_name, url)]
             raise URLFetchException()
@@ -125,11 +130,8 @@ class RFCBibtex(object):
         id_type = None # needed for error reporting
 
         if id_name.startswith('rfc'):
-            # we have an RFC
-            id_name = id_name[3:]
             id_type = self.ID_TYPE_RFC
         elif id_name.startswith('draft'):
-            # we have an Internet Draft
             id_type = self.ID_TYPE_INTERNET_DRAFT
         else:
             # we have an error in an id, but let's not fail the program

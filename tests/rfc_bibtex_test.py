@@ -2,6 +2,7 @@ import unittest
 
 from rfc_bibtex.rfc_bibtex import RFCBibtex
 from rfc_bibtex.exceptions import BadRFCNumberException
+
 class TestRFCMethods(unittest.TestCase):
     def test_re(self):
         self.assertTrue(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{RFC32}"))
