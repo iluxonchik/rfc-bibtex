@@ -38,11 +38,11 @@ in bibtex format. It simply automates the requests that you can do manually from
     -o FILE_NAME, --output FILE_NAME
                         output the resulting bibtex to a file
 
-## Input Format
+## Identifier Format
 
-The input format of RFCs is `rfc<rfc_num>`, where `<rfc_num>` is the RFC number.
+The identifier format of RFCs is `rfc<rfc_num>`, where `<rfc_num>` is the RFC number.
 For example, for the [RFC specifying TLS 1.2](https://tools.ietf.org/html/rfc5246) you
-would write `rfc5246` (**NOTE**: `RFC5246` is also accepted).
+would write `rfc5246` (**NOTE**: the letters RFC can also be capitalized, so that `RFC5246` is also accepted).
 
 The input format of Internet-Drafts(I-Ds) is `draft-<rest>`, where `<rest>` is the rest of
 the draft's name ([all Internet-Drafts begin with "draft"](https://www.ietf.org/id-info/guidelines.html#naming)). For example, for the
@@ -87,11 +87,19 @@ Example command:
     }
 
 
-## Read Inputs From A file
+## Read Identifiers From A file
 
 Option: `-f <file_name1> ... <file_nameN>`
 
-Consider that you have a file called `rfcs_and_ids.txt` with the following
+Alternatively, identifiers can be specified in a file.  Two input formats are accepted.
+
+**LaTeX .aux files**: If you have a LaTeX .aux file, this program will parse the \citation{} commands in the file
+and extract those that appear to be RFCs or internet drafts. If you specify a .tex file, the program will look for the matching .aux
+file and generate an error if it is not present.
+
+**Plain text files**: Alternatively, you may simpy specify a series of identifiers, one per line in your text file.
+
+For example, consider you have a file called `rfcs_and_ids.txt` with the following
 content:
 
     rfc7925
@@ -142,7 +150,7 @@ Example command:
 
 `python rfc-bibtex.py RFC5246 draft-ietf-tls-tls13-21 -f rfc_and_ids.txt -o output.bib`
 
-A file `output.bib` would be created or overriden wit the following content:
+A file `output.bib` would be created or overriden with the following content:
 
     @techreport{RFC5246,
       author = {T. Dierks and E. Rescorla},
@@ -204,4 +212,4 @@ A file `output.bib` would be created or overriden wit the following content:
 # Comments
 
 This tool was written quickly to address a specific need. Only basic tests
-have been perfomed, no automated testing suite is included.
+have been perfomed, and only a few automated tests are included.

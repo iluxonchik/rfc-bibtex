@@ -3,3 +3,6 @@ class BadIDNameException(ValueError):
 
 class URLFetchException(ValueError):
     pass
+
+class BadRFCNumberException(ValueError):
+    pass
