@@ -1,18 +1,25 @@
 #!/usr/bin/env python3
 import sys, re
+import pathlib
+import os, os.path
 from urllib import request
+import urllib.error
 import random
 
-from .exceptions import BadIDNameException, URLFetchException
+from .exceptions import BadIDNameException, URLFetchException, BadRFCNumberException
 from .utils import print_err_red
 from .parser import Parser
 
 class RFCBibtex(object):
 
-    URL_FMT = 'https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type={}&number={}'
+    # Old server; a backup
+    #URL_FMT      = 'https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type={id_type}&number={id_name}'
+    URL_FMT       = 'https://datatracker.ietf.org/doc/{id_name}/bibtex/'
     URL_ERROR_MSG = 'Failed to read RFC or Internt-Draft resource'
-    ID_TYPE_RFC = 'RFC'
+    ID_TYPE_RFC   = 'RFC'
     ID_TYPE_INTERNET_DRAFT = 'I-D'
+
+    # This client uses multiple user agents to fake out attempts to prevent webscraping. 
     USER_AGENTS = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
@@ -25,8 +32,13 @@ class RFCBibtex(object):
                    'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36']
 
+    # If scanning a .aux file, look for RFC or Internet draft citations with this regular expression
+    LATEX_CITATION_RE = re.compile(r"^\\citation\{((rfc.*)|(draft-.*))\}",re.I)
+    TEX_EXTENSION = '.tex'
+    AUX_EXTENSION = '.aux'
+
     def __init__(self, id_names=[], in_file_name=None, out_file_name=None):
-        self._id_names = id_names
+        self._id_names      = id_names
         self._out_file_name = out_file_name
 
         self._id_name_err_list = []
@@ -35,27 +47,40 @@ class RFCBibtex(object):
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
+    @staticmethod
+    def _rfc_key_function(name):
+        """Turn RFC32 into RFC00032 for sorting. This needs to be a staticmethod because it is called as a function from sorted()."""
+        try:
+            if name.upper().startswith('RFC'):
+                return "RFC{:05d}".format( int(name[3:]))
+        except (ValueError,TypeError) as e:
+            raise BadRFCNumberException(name)
+        return name
+
     def _read_ids_from_file(self, file_name):
-        with open(file_name, 'r') as in_file:
+        """
+        Read identifiers from a text file. 
+        If the text file is a LaTeX .aux file, parse the \citation{} command.
+        If the text file is a LaTeX .tex file, parse the corresponding .aux file
+        """
+        file_name = pathlib.Path(file_name)
+        if file_name.stem == self.TEX_EXTENSION:
+            file_name_aux = file_name.parent / (file_name.stem + self.AUX_EXTENSION)
+            if not file_name_aux.exists():
+                raise RuntimeError("Run LaTeX on {} to create {}".format(file_name,file_name_aux)) 
+            file_name = file_name_aux
+        with file_name.open() as in_file:
+            if file_name.suffix == self.AUX_EXTENSION:
+                rfcs = set([m.group(1) for line in in_file for m in [self.LATEX_CITATION_RE.search(line)] if m])
+                return sorted(rfcs, key=self._rfc_key_function)
             return [line.strip() for line in in_file ]
 
-    def _generate_bibtex_to_file(self):
-        with open(self._out_file_name, 'w') as out_file:
-            for id_name in self._id_names:
-                try:
-                    entry = self.get_bibtex_from_id(id_name)
-                    out_file.write(entry)
-                    out_file.write('\n\n')
-                except (URLFetchException, BadIDNameException):
-                    # error already logged
-                    pass
-
-    def _generate_bibtex_to_stdout(self):
+    def _generate_bibtex(self,out_file):
         for id_name in self._id_names:
             try:
                 entry = self.get_bibtex_from_id(id_name)
-                print(entry)
-                print('\n', end='')
+                out_file.write(entry)
+                out_file.write('\n\n')
             except (URLFetchException, BadIDNameException):
                 # error already logged
                 pass
@@ -74,9 +99,10 @@ class RFCBibtex(object):
 
     def generate_bibtex(self):
         if self._out_file_name is not None:
-            self._generate_bibtex_to_file()
+            with open(self._out_file_name, 'w') as out_file:
+                self._generate_bibtex(out_file)
         else:
-            self._generate_bibtex_to_stdout()
+            self._generate_bibtex(sys.stdout)
 
         self._print_errors()
 
@@ -87,7 +113,10 @@ class RFCBibtex(object):
 
     def get_bibtex_from_id(self, id_name):
         url, id_type, id_name = self._get_url_from_id_name(id_name)
-        response = self._get_response_from_url(url)
+        try:
+            response = self._get_response_from_url(url)
+        except urllib.error.HTTPError:
+            raise RuntimeError("bad url: "+url)
         if response.startswith(self.URL_ERROR_MSG):
             self._remote_fetch_err_list += [(id_type, id_name, url)]
             raise URLFetchException()
@@ -101,11 +130,8 @@ class RFCBibtex(object):
         id_type = None # needed for error reporting
 
         if id_name.startswith('rfc'):
-            # we have an RFC
-            id_name = id_name[3:]
             id_type = self.ID_TYPE_RFC
         elif id_name.startswith('draft'):
-            # we have an Internet Draft
             id_type = self.ID_TYPE_INTERNET_DRAFT
         else:
             # we have an error in an id, but let's not fail the program
@@ -114,7 +140,7 @@ class RFCBibtex(object):
             self._id_name_err_list += [id_name]
             raise BadIDNameException()
 
-        url = self.URL_FMT.format(id_type, id_name)
+        url = self.URL_FMT.format(id_type=id_type, id_name=id_name)
         return url, id_type, id_name
 
     def _get_response_from_url(self, url):
