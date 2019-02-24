@@ -35,30 +35,25 @@ class RFCBibtex(object):
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
+    @property
+    def bibtex_entries(self):
+        # remove Nones (errors returned by urllib), so that they're not printed
+        return filter(None.__ne__, [self.get_bibtex_from_id(id_name) for id_name in self._id_names])
+
     def _read_ids_from_file(self, file_name):
         with open(file_name, 'r') as in_file:
             return [line.strip() for line in in_file ]
 
     def _generate_bibtex_to_file(self):
         with open(self._out_file_name, 'w') as out_file:
-            for id_name in self._id_names:
-                try:
-                    entry = self.get_bibtex_from_id(id_name)
-                    out_file.write(entry)
-                    out_file.write('\n\n')
-                except (URLFetchException, BadIDNameException):
-                    # error already logged
-                    pass
+            for entry in self.bibtex_entries:
+                out_file.write(entry)
+                out_file.write('\n\n')
 
     def _generate_bibtex_to_stdout(self):
-        for id_name in self._id_names:
-            try:
-                entry = self.get_bibtex_from_id(id_name)
-                print(entry)
-                print('\n', end='')
-            except (URLFetchException, BadIDNameException):
-                # error already logged
-                pass
+        for entry in self.bibtex_entries:
+            print(entry)
+            print('\n', end='')
 
     def _print_errors(self):
         if self._id_name_err_list:
@@ -90,7 +85,7 @@ class RFCBibtex(object):
         response = self._get_response_from_url(url)
         if response.startswith(self.URL_ERROR_MSG):
             self._remote_fetch_err_list += [(id_type, id_name, url)]
-            raise URLFetchException()
+            return None # None type objects will be ignored by the output
         response = self._make_title_uppercase(response)
         response = response.strip()
         return response

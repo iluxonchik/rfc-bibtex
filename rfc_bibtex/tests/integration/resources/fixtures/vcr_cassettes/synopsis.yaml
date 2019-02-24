@@ -1,0 +1,83 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [sysnetgrp.no-ip.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=RFC&number=5246
+  response:
+    body: {string: "@techreport{RFC5246,\n  author = {T. Dierks and E. Rescorla},\n\
+        \  title = {The Transport Layer Security (TLS) Protocol Version 1.2},\n  howpublished\
+        \ = {Internet Requests for Comments},\n  type = {RFC},\n  number = {5246},\n\
+        \  year = {2008},\n  month = {August},\n  issn = {2070-1721},\n  publisher\
+        \ = {RFC Editor},\n  institution = {RFC Editor},\n  url = {http://www.rfc-editor.org/rfc/rfc5246.txt},\n\
+        \  note = {\\url{http://www.rfc-editor.org/rfc/rfc5246.txt}},\n}\n\n"}
+    headers:
+      Access-Control-Allow-Headers: ['Origin, X-Requested-With, Content-Type, Accept']
+      Access-Control-Allow-Methods: [GET]
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Length: ['449']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Sun, 24 Feb 2019 12:27:30 GMT']
+      Server: [Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 SVN/1.7.14 Phusion_Passenger/4.0.53
+          mod_perl/2.0.10 Perl/v5.16.3]
+      X-Powered-By: [PHP/5.4.16]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [sysnetgrp.no-ip.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=I-D&number=draft-ietf-tls-tls13-21
+  response:
+    body: {string: "@techreport{I-D.ietf-tls-tls13,\n  author = {Eric Rescorla},\n\
+        \  title = {The Transport Layer Security (TLS) Protocol Version 1.3},\n  howpublished\
+        \ = {Working Draft},\n  type = {Internet-Draft},\n  number = {draft-ietf-tls-tls13-21},\n\
+        \  year = {2017},\n  month = {July},\n  institution = {IETF Secretariat},\n\
+        \  url = {http://www.ietf.org/internet-drafts/draft-ietf-tls-tls13-21.txt},\n\
+        \  note = {\\url{http://www.ietf.org/internet-drafts/draft-ietf-tls-tls13-21.txt}},\n\
+        }\n\n"}
+    headers:
+      Access-Control-Allow-Headers: ['Origin, X-Requested-With, Content-Type, Accept']
+      Access-Control-Allow-Methods: [GET]
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Length: ['459']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Sun, 24 Feb 2019 12:27:30 GMT']
+      Server: [Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 SVN/1.7.14 Phusion_Passenger/4.0.53
+          mod_perl/2.0.10 Perl/v5.16.3]
+      X-Powered-By: [PHP/5.4.16]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [sysnetgrp.no-ip.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=RFC&number=8446
+  response:
+    body: {string: "@techreport{RFC8446,\n  author = {E. Rescorla},\n  title = {The\
+        \ Transport Layer Security (TLS) Protocol Version 1.3},\n  howpublished =\
+        \ {Internet Requests for Comments},\n  type = {RFC},\n  number = {8446},\n\
+        \  year = {2018},\n  month = {August},\n  issn = {2070-1721},\n  publisher\
+        \ = {RFC Editor},\n  institution = {RFC Editor},\n}\n\n"}
+    headers:
+      Access-Control-Allow-Headers: ['Origin, X-Requested-With, Content-Type, Accept']
+      Access-Control-Allow-Methods: [GET]
+      Access-Control-Allow-Origin: ['*']
+      Connection: [close]
+      Content-Length: ['322']
+      Content-Type: [text/html; charset=UTF-8]
+      Date: ['Sun, 24 Feb 2019 12:27:31 GMT']
+      Server: [Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips PHP/5.4.16 SVN/1.7.14 Phusion_Passenger/4.0.53
+          mod_perl/2.0.10 Perl/v5.16.3]
+      X-Powered-By: [PHP/5.4.16]
+    status: {code: 200, message: OK}
+version: 1
