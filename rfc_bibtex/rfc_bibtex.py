@@ -56,6 +56,11 @@ class RFCBibtex(object):
         except (ValueError,TypeError) as e:
             raise BadRFCNumberException(name)
         return name
+        
+    @property
+    def bibtex_entries(self):
+        # remove Nones (errors returned by urllib), so that they're not printed
+        return filter(None.__ne__, [self.get_bibtex_from_id(id_name) for id_name in self._id_names])
 
     def _read_ids_from_file(self, file_name):
         """
@@ -75,15 +80,10 @@ class RFCBibtex(object):
                 return sorted(rfcs, key=self._rfc_key_function)
             return [line.strip() for line in in_file ]
 
-    def _generate_bibtex(self,out_file):
-        for id_name in self._id_names:
-            try:
-                entry = self.get_bibtex_from_id(id_name)
-                out_file.write(entry)
-                out_file.write('\n\n')
-            except (URLFetchException, BadIDNameException):
-                # error already logged
-                pass
+    def _generate_bibtex(self, outfile=sys.stdout):
+        for entry in self.bibtex_entries:
+            output = '{}\n'.format(entry)
+            print(output, file=outfile)
 
     def _print_errors(self):
         if self._id_name_err_list:
@@ -119,7 +119,7 @@ class RFCBibtex(object):
             raise RuntimeError("bad url: "+url)
         if response.startswith(self.URL_ERROR_MSG):
             self._remote_fetch_err_list += [(id_type, id_name, url)]
-            raise URLFetchException()
+            return None # None type objects will be ignored by the output
         response = self._make_title_uppercase(response)
         response = response.strip()
         return response
