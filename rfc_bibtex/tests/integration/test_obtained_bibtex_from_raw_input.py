@@ -25,7 +25,7 @@ class TestObtainedBibtexFromRawRFCInput(BaseRFCBibTexIntegrationTestCase):
     def tearDown(self):
         pass
 
-    @vcr.use_cassette(path='rfc_bibtex/tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml')
+    @vcr.use_cassette(path='rfc_bibtex/tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_command_line_returns_expected_latex(self):
         rfc_bibtex = RFCBibtex(['RFC5246', 'draft-ietf-tls-tls13-21', 'RFC8446'])
         entries = list(rfc_bibtex.bibtex_entries)
@@ -42,7 +42,7 @@ class TestObtainedBibtexFromRawRFCInput(BaseRFCBibTexIntegrationTestCase):
         self.assertIn("2018", entries[2])
         self.assertIn("RFC Editor", entries[2])
 
-    @vcr.use_cassette(path='rfc_bibtex/tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml')
+    @vcr.use_cassette(path='rfc_bibtex/tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_file_returns_expected_latex(self):
         rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_PATH)
         entries = list(rfc_bibtex.bibtex_entries)
@@ -58,4 +58,6 @@ class TestObtainedBibtexFromRawRFCInput(BaseRFCBibTexIntegrationTestCase):
         self.assertIn("The Transport Layer Security (TLS) Protocol Version 1.3", entries[1])
         self.assertIn("2018", entries[2])
         self.assertIn("RFC Editor", entries[2])
+
+    
 

@@ -10,16 +10,35 @@ from .exceptions import BadIDNameException, URLFetchException, BadRFCNumberExcep
 from .utils import print_err_red
 from .parser import Parser
 
+"""
+TODO:
+1. update URL_FMT
+https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=I-D&number=draft-ietf-tls-tls13-22
+https://datatracker.ietf.org/doc/draft-ietf-tls-tls13/22/bibtex/
+
+https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=rfc&number=8446
+https://datatracker.ietf.org/doc/rfc8446/bibtex/
+
+* when getting internet drafts, the returned @misc id is different from the name of id of the draft, thus
+   it needs to be adapted (overriden)
+* if the draft is provided without a version, the latest version of it is returned.
+  It might even happen that that version is an RFC! Thus, this needs to be treated appropriately.
+  if the user is using drafts without ID, allow it to go through, override the name in @misc, BUT WARN THE USER WITH YELLOW that it's recommened to provide the
+  if the user is using drafts without ID and an RFC is returned, allow it to go through, override the name in @misc, BUT WARN THE USER WITH RED.
+
+
+"""
+
 class RFCBibtex(object):
 
     # Old server; a backup
     #URL_FMT      = 'https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type={id_type}&number={id_name}'
-    URL_FMT       = 'https://datatracker.ietf.org/doc/{id_name}/bibtex/'
+    URL_FMT_RFC_OR_DRAFT_WITHOUT_ID       = 'https://datatracker.ietf.org/doc/{id_name}/bibtex/'
+    URL_FMT_DRAFT                         = 'https://datatracker.ietf.org/doc/{id_name}/{version}/bibtex/'
     URL_ERROR_MSG = 'Failed to read RFC or Internt-Draft resource'
-    ID_TYPE_RFC   = 'RFC'
-    ID_TYPE_INTERNET_DRAFT = 'I-D'
+    ID_TYPE_RFC   = 'rfc'
+    ID_TYPE_INTERNET_DRAFT = ['draft', 'ietf']
 
-    # This client uses multiple user agents to fake out attempts to prevent webscraping. 
     USER_AGENTS = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
@@ -44,6 +63,13 @@ class RFCBibtex(object):
         self._id_name_err_list = []
         self._remote_fetch_err_list = [] # (type, name, url)
 
+        # list of provided draft ids that do not explicity declare a version
+        self._id_drafts_without_version_list = []
+        self._id_drafts_promoted_to_rfc = []
+
+        self._draft_version_re = re.compile(r"(?P<id>.+)-(?P<version>\d+)$")
+        self._bibtex_id_re = re.compile(r"@\w+{(?P<bibtex_id>.+?),")
+
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
@@ -62,6 +88,10 @@ class RFCBibtex(object):
         # remove Nones (errors returned by urllib), so that they're not printed
         return filter(None.__ne__, [self.get_bibtex_from_id(id_name) for id_name in self._id_names])
 
+    def _read_ids_from_plain_file(self, filename):
+        with open(filename, 'r') as in_file:
+            return [line.strip() for line in in_file ]
+
     def _read_ids_from_file(self, file_name):
         """
         Read identifiers from a text file. 
@@ -69,6 +99,10 @@ class RFCBibtex(object):
         If the text file is a LaTeX .tex file, parse the corresponding .aux file
         """
         file_name = pathlib.Path(file_name)
+        if file_name.stem not in [self.TEX_EXTENSION, self.AUX_EXTENSION]:
+            # file containing one ID per line 
+            return self._read_ids_from_plain_file(file_name)
+
         if file_name.stem == self.TEX_EXTENSION:
             file_name_aux = file_name.parent / (file_name.stem + self.AUX_EXTENSION)
             if not file_name_aux.exists():
@@ -94,8 +128,29 @@ class RFCBibtex(object):
         if self._remote_fetch_err_list:
             print_err_red('ERRORS in fetching from the URLs (ignored):\n')
             for err_tuple in self._remote_fetch_err_list:
-                type_name = err_tuple[0] if err_tuple[0] == self.ID_TYPE_RFC else 'Internet-Drafts'
+                type_name = err_tuple[0] if err_tuple[0] == self.ID_TYPE_RFC else 'Internet Draft'
                 print('\t* Type:{} | ID:{} | URL:{}'.format(type_name, err_tuple[1], err_tuple[2]), file=sys.stderr)
+
+    def _print_no_explicit_version_warnings(self):
+        if self._id_drafts_without_version_list:
+            print('WARNING')
+            print(
+            """
+            If the draft version is not explicitly defined in the draft ID, the latest one will be obtained,
+            which may be an RFC ID, in case the draft has been assigned one. If the latter happens, you will receive a
+            separate warning of the drafts that are now in the RFC stage. It is highly recommended to define the draft ID
+            explicitly, since there may be major document differences between two draft versions.
+            """)
+            print('No explicit version has been defined for following draft ids:')
+            for draft_id in self._id_drafts_without_version_list:
+                print('\t{draft_id}'.format(draft_id))
+
+    def _print_drafts_updated_to_rfcs(self):
+        if self._id_drafts_promoted_to_rfc:
+            print('WARNING')
+            print("The following drafts without an explicitly provided version have been assigned an RFC number:")
+            for draft_id in self._id_drafts_promoted_to_rfc:
+                print('\t{draft_id}'.format(draft_id))
 
     def generate_bibtex(self):
         if self._out_file_name is not None:
@@ -104,6 +159,8 @@ class RFCBibtex(object):
         else:
             self._generate_bibtex(sys.stdout)
 
+        self._print_no_explicit_version_warnings()
+        self._print_drafts_updated_to_rfcs()
         self._print_errors()
 
     def _make_title_uppercase(self, response):
@@ -111,10 +168,31 @@ class RFCBibtex(object):
         res =  r.sub(r'\1{\2}', response)
         return res
 
+    def _replace_bibtex_name_if_needed(self, response, id_name):
+        if (self._id_is_rfc(id_name)):
+            return response
+        elif (self._id_is_draft(id_name)):
+            """
+            1. prepend "draft" to the id retuned by bubtex
+               1.1 if the returned string is an RFC, add id_name to warning list
+            """
+            bibtex_id = self._get_id_from_bibtex(response)
+            new_response = re.sub(bibtex_id, id_name, response, count=1)
+            
+            if self._id_is_rfc(bibtex_id):
+                self._id_drafts_promoted_to_rfc.append(id_name)
+
+            return new_response
+        else:
+            # id is neither RFC, nor draft, this should nenver happen
+            raise Exception("Unexpected entry id: {id_name}. Expecting either an RFC or a draft".format(id_name))
+        
     def get_bibtex_from_id(self, id_name):
         url, id_type, id_name = self._get_url_from_id_name(id_name)
         try:
             response = self._get_response_from_url(url)
+            # override ids for drafts
+            response = self._replace_bibtex_name_if_needed(response, id_name)
         except urllib.error.HTTPError:
             raise RuntimeError("bad url: "+url)
         if response.startswith(self.URL_ERROR_MSG):
@@ -124,24 +202,49 @@ class RFCBibtex(object):
         response = response.strip()
         return response
 
+    def _get_url_from_rfc_id(self, rfc_id):
+        return self.URL_FMT_RFC_OR_DRAFT_WITHOUT_ID.format(id_name=rfc_id)
+
+    def _get_url_from_draft_id(self, draft_id):
+        match = self._draft_version_re.search(draft_id)
+        
+        if match:
+            # draft version has been found
+            draft_id_without_version = match.group('id')
+            draft_version = match.group('version')
+            return self.URL_FMT_DRAFT.format(id_name=draft_id_without_version, version=draft_version)
+        else:
+            self._id_drafts_without_version_list.append(draft_id)
+            return self.URL_FMT_RFC_OR_DRAFT_WITHOUT_ID.format(draft_id)
+
+    @staticmethod
+    def _id_is_draft(id_name):
+        return id_name.startswith(RFCBibtex.ID_TYPE_INTERNET_DRAFT[0]) or id_name.startswith(RFCBibtex.ID_TYPE_INTERNET_DRAFT[1])
+    
+    @staticmethod
+    def _id_is_rfc(id_name):
+        return id_name.startswith(RFCBibtex.ID_TYPE_RFC)
+    
+    def _get_id_from_bibtex(self, bibtex):
+        match = self._bibtex_id_re.search(bibtex)
+        if match:
+            return match.group('bibtex_id')
+        raise BadIDNameException('Could not parse id of the bibtex: {}'.format(bibtex))
 
     def _get_url_from_id_name(self, id_name):
         id_name = id_name.lower()
         id_type = None # needed for error reporting
 
-        if id_name.startswith('rfc'):
-            id_type = self.ID_TYPE_RFC
-        elif id_name.startswith('draft'):
-            id_type = self.ID_TYPE_INTERNET_DRAFT
+        if self._id_is_rfc(id_name):
+            return self._get_url_from_rfc_id(id_name), self.ID_TYPE_RFC, id_name
+        elif self._id_is_draft(id_name):
+            return self._get_url_from_draft_id(id_name), self.ID_TYPE_RFC, id_name
         else:
             # we have an error in an id, but let's not fail the program
             # letting the valid names complete. We'll simply notify the user
             # of the error at the end.
             self._id_name_err_list += [id_name]
             raise BadIDNameException()
-
-        url = self.URL_FMT.format(id_type=id_type, id_name=id_name)
-        return url, id_type, id_name
 
     def _get_response_from_url(self, url):
         uagent = random.choice(self.USER_AGENTS)
