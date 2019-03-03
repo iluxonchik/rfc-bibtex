@@ -52,7 +52,8 @@ class RFCBibtex(object):
                    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36']
 
     # If scanning a .aux file, look for RFC or Internet draft citations with this regular expression
-    LATEX_CITATION_RE = re.compile(r"^\\citation\{((rfc.*)|(draft-.*))\}",re.I)
+    AUX_CITATION_RE = re.compile(r"^\\citation\{((rfc.+?)|(draft-.+?))\}",re.I)
+    TEX_CITATION_RE = re.compile(r"^\\cite\{((rfc.+?)|(draft-.+?))\}",re.I)
     TEX_EXTENSION = '.tex'
     AUX_EXTENSION = '.aux'
 
@@ -89,30 +90,40 @@ class RFCBibtex(object):
         return filter(None.__ne__, [self.get_bibtex_from_id(id_name) for id_name in self._id_names])
 
     def _read_ids_from_plain_file(self, filename):
-        with open(filename, 'r') as in_file:
-            return [line.strip() for line in in_file ]
+        with open(filename, 'r') as f:
+            return [line.strip() for line in f ]
 
-    def _read_ids_from_file(self, file_name):
+    def _read_ids_from_aux_file(self, filename):
+        sort_entries = False # TODO: not yet implemented
+        with open(filename, 'r') as f:
+            rfcs = set([m.group(1) for line in f for m in [self.AUX_CITATION_RE.search(line)] if m])
+            if sort_entries:
+                rfcs = sorted(rfcs, key=self._rfc_key_function)
+        return rfcs
+
+    def _read_ids_from_tex_file(self, filename):
+        sort_entries = False # TODO: not yet implemented
+        with open(filename, 'r') as f:
+            rfcs = set([m.group(1) for line in f for m in [self.TEX_CITATION_RE.search(line)] if m])
+            if sort_entries:
+                rfcs = sorted(rfcs, key=self._rfc_key_function)
+        return rfcs
+
+    def _read_ids_from_file(self, filename):
         """
         Read identifiers from a text file. 
         If the text file is a LaTeX .aux file, parse the \citation{} command.
         If the text file is a LaTeX .tex file, parse the corresponding .aux file
         """
-        file_name = pathlib.Path(file_name)
-        if file_name.stem not in [self.TEX_EXTENSION, self.AUX_EXTENSION]:
-            # file containing one ID per line 
-            return self._read_ids_from_plain_file(file_name)
+        filename = pathlib.Path(filename)
 
-        if file_name.stem == self.TEX_EXTENSION:
-            file_name_aux = file_name.parent / (file_name.stem + self.AUX_EXTENSION)
-            if not file_name_aux.exists():
-                raise RuntimeError("Run LaTeX on {} to create {}".format(file_name,file_name_aux)) 
-            file_name = file_name_aux
-        with file_name.open() as in_file:
-            if file_name.suffix == self.AUX_EXTENSION:
-                rfcs = set([m.group(1) for line in in_file for m in [self.LATEX_CITATION_RE.search(line)] if m])
-                return sorted(rfcs, key=self._rfc_key_function)
-            return [line.strip() for line in in_file ]
+        if filename.suffix == self.AUX_EXTENSION:
+            return self._read_ids_from_aux_file(filename)
+        elif filename.suffix == self.TEX_EXTENSION:
+            return self._read_ids_from_tex_file(filename)
+        else:
+            # file containing one ID per line 
+            return self._read_ids_from_plain_file(filename)
 
     def _generate_bibtex(self, outfile=sys.stdout):
         for entry in self.bibtex_entries:

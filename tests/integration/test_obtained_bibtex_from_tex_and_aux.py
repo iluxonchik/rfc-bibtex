@@ -23,7 +23,7 @@ class TestObtainedBibtexFromTexAndAuxFiles(BaseRFCBibTexIntegrationTestCase):
     def tearDown(self):
         pass
 
-    @vcr.use_cassette(path='integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
+    @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_aux_file_returns_expected_latex(self):
         rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_PATH_AUX)
         entries = list(rfc_bibtex.bibtex_entries)
@@ -40,7 +40,7 @@ class TestObtainedBibtexFromTexAndAuxFiles(BaseRFCBibTexIntegrationTestCase):
         self.assertIn("2018", entries[2])
         self.assertIn("RFC Editor", entries[2])
 
-    @vcr.use_cassette(path='integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
+    @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_tex_file_returns_expected_latex(self):
         rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_PATH_TEX)
         entries = list(rfc_bibtex.bibtex_entries)
