@@ -5,9 +5,9 @@ from rfc_bibtex.exceptions import BadRFCNumberException
 
 class RegexParsingTestCase(unittest.TestCase):
     def test_re(self):
-        self.assertTrue(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{RFC32}"))
-        self.assertTrue(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{draft-tls-nothing}"))
-        self.assertFalse(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{nothing}"))
+        self.assertTrue(RFCBibtex.AUX_CITATION_RE.search(r"\citation{RFC32}"))
+        self.assertTrue(RFCBibtex.AUX_CITATION_RE.search(r"\citation{draft-tls-nothing}"))
+        self.assertFalse(RFCBibtex.AUX_CITATION_RE.search(r"\citation{nothing}"))
 
     def test_rfc_keyfunction(self):
         self.assertEqual(RFCBibtex._rfc_key_function("RFC32"), "RFC00032")
