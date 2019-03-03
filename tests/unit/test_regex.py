@@ -3,7 +3,7 @@ import unittest
 from rfc_bibtex.rfc_bibtex import RFCBibtex
 from rfc_bibtex.exceptions import BadRFCNumberException
 
-class TestRFCMethods(unittest.TestCase):
+class RegexParsingTestCase(unittest.TestCase):
     def test_re(self):
         self.assertTrue(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{RFC32}"))
         self.assertTrue(RFCBibtex.LATEX_CITATION_RE.search(r"\citation{draft-tls-nothing}"))
@@ -17,6 +17,3 @@ class TestRFCMethods(unittest.TestCase):
         except BadRFCNumberException:
             pass
         
-
-if __name__=="__main__":
-    unittest.main()
