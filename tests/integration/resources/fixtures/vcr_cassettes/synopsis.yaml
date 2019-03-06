@@ -479,10 +479,2152 @@ interactions:
       ETag: ['"a0988071cdc04bf187cc4794a71829d5"']
       Server: [Apache]
       Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc9999/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc9999/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc9999/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 21:52:41 GMT']
+      ETag: ['"697c15f3cabb9a3d12f2604d4a7ed83f"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc0101/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc0101/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc0101/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 21:52:42 GMT']
+      ETag: ['"a6aabc3fadd1a3d1116002f0f7af9d43"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/draft-ietf-tls-tls13/21/bibtex/
+  response:
+    body: {string: "%% You should probably cite rfc8446 instead of this I-D.\n@techreport{ietf-tls-tls13-21,\n\
+        \tnumber =\t{draft-ietf-tls-tls13-21},\n\ttype =\t\t{Internet-Draft},\n\t\
+        institution =\t{Internet Engineering Task Force},\n\tpublisher =\t{Internet\
+        \ Engineering Task Force},\n\tnote =\t\t{Work in Progress},\n\turl =\t\t{https://datatracker.ietf.org/doc/html/draft-ietf-tls-tls13-21},\n\
+        \        author =\t{Eric Rescorla},\n\ttitle =\t\t{{The Transport Layer Security\
+        \ (TLS) Protocol Version 1.3}},\n\tpagetotal =\t143,\n\tyear =\t\t,\n\tmonth\
+        \ =\t\t,\n\tday =\t\t,\n\tabstract =\t{This document specifies version 1.3\
+        \ of the Transport Layer Security (TLS) protocol. TLS allows client/server\
+        \ applications to communicate over the Internet in a way that is designed\
+        \ to prevent eavesdropping, tampering, and message forgery.},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:09:36 GMT']
+      ETag: ['"58085e3c0dc7c81cdef294dadfdbec54"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc8446/bibtex/
+  response:
+    body: {string: "@misc{rfc8446,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t8446,\n\thowpublished =\t{RFC 8446},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC8446},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc8446.txt},\n\
+        \        author =\t{Eric Rescorla},\n\ttitle =\t\t{{The Transport Layer Security\
+        \ (TLS) Protocol Version 1.3}},\n\tpagetotal =\t160,\n\tyear =\t\t2018,\n\t\
+        month =\t\taug,\n\tabstract =\t{This document specifies version 1.3 of the\
+        \ Transport Layer Security (TLS) protocol. TLS allows client/server applications\
+        \ to communicate over the Internet in a way that is designed to prevent eavesdropping,\
+        \ tampering, and message forgery. This document updates RFCs 5705 and 6066,\
+        \ and obsoletes RFCs 5077, 5246, and 6961. This document also specifies new\
+        \ requirements for TLS 1.2 implementations.},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:09:37 GMT']
+      ETag: ['"da82c8d74d3f43e3df8ac09994f71ca2"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc5246/bibtex/
+  response:
+    body: {string: "@misc{rfc5246,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t5246,\n\thowpublished =\t{RFC 5246},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC5246},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc5246.txt},\n\
+        \        author =\t{Eric Rescorla and Tim Dierks},\n\ttitle =\t\t{{The Transport\
+        \ Layer Security (TLS) Protocol Version 1.2}},\n\tpagetotal =\t104,\n\tyear\
+        \ =\t\t2008,\n\tmonth =\t\taug,\n\tabstract =\t{This document specifies Version\
+        \ 1.2 of the Transport Layer Security (TLS) protocol. The TLS protocol provides\
+        \ communications security over the Internet. The protocol allows client/server\
+        \ applications to communicate in a way that is designed to prevent eavesdropping,\
+        \ tampering, or message forgery. {[}STANDARDS-TRACK{]}},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:09:38 GMT']
+      ETag: ['"a0988071cdc04bf187cc4794a71829d5"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc5246/bibtex/
+  response:
+    body: {string: "@misc{rfc5246,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t5246,\n\thowpublished =\t{RFC 5246},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC5246},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc5246.txt},\n\
+        \        author =\t{Eric Rescorla and Tim Dierks},\n\ttitle =\t\t{{The Transport\
+        \ Layer Security (TLS) Protocol Version 1.2}},\n\tpagetotal =\t104,\n\tyear\
+        \ =\t\t2008,\n\tmonth =\t\taug,\n\tabstract =\t{This document specifies Version\
+        \ 1.2 of the Transport Layer Security (TLS) protocol. The TLS protocol provides\
+        \ communications security over the Internet. The protocol allows client/server\
+        \ applications to communicate in a way that is designed to prevent eavesdropping,\
+        \ tampering, or message forgery. {[}STANDARDS-TRACK{]}},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:09:40 GMT']
+      ETag: ['"a0988071cdc04bf187cc4794a71829d5"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/draft-the-doctors-advocate/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/draft-the-doctors-advocate/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/draft-the-doctors-advocate/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:12:23 GMT']
+      ETag: ['"2cce174b14b101b393b9fdf235dfc46d"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc5246/bibtex/
+  response:
+    body: {string: "@misc{rfc5246,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t5246,\n\thowpublished =\t{RFC 5246},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC5246},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc5246.txt},\n\
+        \        author =\t{Eric Rescorla and Tim Dierks},\n\ttitle =\t\t{{The Transport\
+        \ Layer Security (TLS) Protocol Version 1.2}},\n\tpagetotal =\t104,\n\tyear\
+        \ =\t\t2008,\n\tmonth =\t\taug,\n\tabstract =\t{This document specifies Version\
+        \ 1.2 of the Transport Layer Security (TLS) protocol. The TLS protocol provides\
+        \ communications security over the Internet. The protocol allows client/server\
+        \ applications to communicate in a way that is designed to prevent eavesdropping,\
+        \ tampering, or message forgery. {[}STANDARDS-TRACK{]}},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:13:26 GMT']
+      ETag: ['"a0988071cdc04bf187cc4794a71829d5"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc8446/bibtex/
+  response:
+    body: {string: "@misc{rfc8446,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t8446,\n\thowpublished =\t{RFC 8446},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC8446},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc8446.txt},\n\
+        \        author =\t{Eric Rescorla},\n\ttitle =\t\t{{The Transport Layer Security\
+        \ (TLS) Protocol Version 1.3}},\n\tpagetotal =\t160,\n\tyear =\t\t2018,\n\t\
+        month =\t\taug,\n\tabstract =\t{This document specifies version 1.3 of the\
+        \ Transport Layer Security (TLS) protocol. TLS allows client/server applications\
+        \ to communicate over the Internet in a way that is designed to prevent eavesdropping,\
+        \ tampering, and message forgery. This document updates RFCs 5705 and 6066,\
+        \ and obsoletes RFCs 5077, 5246, and 6961. This document also specifies new\
+        \ requirements for TLS 1.2 implementations.},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:32 GMT']
+      ETag: ['"da82c8d74d3f43e3df8ac09994f71ca2"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc000012/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc000012/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc000012/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:32 GMT']
+      ETag: ['"ae23612e8f2ceec89b9a516b5aa2cc24"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc999999999/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc999999999/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc999999999/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:33 GMT']
+      ETag: ['"8890b697f024e51f78a79503711c2ad8"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/draft-ietf-tls-tls13/21/bibtex/
+  response:
+    body: {string: "%% You should probably cite rfc8446 instead of this I-D.\n@techreport{ietf-tls-tls13-21,\n\
+        \tnumber =\t{draft-ietf-tls-tls13-21},\n\ttype =\t\t{Internet-Draft},\n\t\
+        institution =\t{Internet Engineering Task Force},\n\tpublisher =\t{Internet\
+        \ Engineering Task Force},\n\tnote =\t\t{Work in Progress},\n\turl =\t\t{https://datatracker.ietf.org/doc/html/draft-ietf-tls-tls13-21},\n\
+        \        author =\t{Eric Rescorla},\n\ttitle =\t\t{{The Transport Layer Security\
+        \ (TLS) Protocol Version 1.3}},\n\tpagetotal =\t143,\n\tyear =\t\t,\n\tmonth\
+        \ =\t\t,\n\tday =\t\t,\n\tabstract =\t{This document specifies version 1.3\
+        \ of the Transport Layer Security (TLS) protocol. TLS allows client/server\
+        \ applications to communicate over the Internet in a way that is designed\
+        \ to prevent eavesdropping, tampering, and message forgery.},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:34 GMT']
+      ETag: ['"58085e3c0dc7c81cdef294dadfdbec54"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: [Accept-Encoding]
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/draft-of-the-fifty-cent/50/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/draft-of-the-fifty-cent/50/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/draft-of-the-fifty-cent/50/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:35 GMT']
+      ETag: ['"ed810e77ba2dc08aab580e48e8d32aff"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc5246/bibtex/
+  response:
+    body: {string: "@misc{rfc5246,\n\tseries =\t{Request for Comments},\n\tnumber\
+        \ =\t5246,\n\thowpublished =\t{RFC 5246},\n\tpublisher =\t{RFC Editor},\n\t\
+        doi =\t\t{10.17487/RFC5246},\n\turl =\t\t{https://rfc-editor.org/rfc/rfc5246.txt},\n\
+        \        author =\t{Eric Rescorla and Tim Dierks},\n\ttitle =\t\t{{The Transport\
+        \ Layer Security (TLS) Protocol Version 1.2}},\n\tpagetotal =\t104,\n\tyear\
+        \ =\t\t2008,\n\tmonth =\t\taug,\n\tabstract =\t{This document specifies Version\
+        \ 1.2 of the Transport Layer Security (TLS) protocol. The TLS protocol provides\
+        \ communications security over the Internet. The protocol allows client/server\
+        \ applications to communicate in a way that is designed to prevent eavesdropping,\
+        \ tampering, or message forgery. {[}STANDARDS-TRACK{]}},\n}\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/plain; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 22:45:38 GMT']
+      ETag: ['"a0988071cdc04bf187cc4794a71829d5"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
       Transfer-Encoding: [chunked]
       Vary: [Accept-Encoding]
       X-Content-Type-Options: [nosniff]
       X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
       X-Xss-Protection: [1; mode=block]
     status: {code: 200, message: OK}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc001023/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc001023/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc001023/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 23:26:15 GMT']
+      ETag: ['"842bd3e7dd240cfc76336069d6ff19e8"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc9999999999/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc9999999999/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc9999999999/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 23:26:16 GMT']
+      ETag: ['"9cb5423c9be5eac39187eca2474f22f3"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfc12314234235235234alkjsdaf/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc12314234235235234alkjsdaf/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfc12314234235235234alkjsdaf/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 23:26:17 GMT']
+      ETag: ['"90489aea2b0277b380ea3c95c88edb67"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfcabcde/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfcabcde/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfcabcde/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 23:26:17 GMT']
+      ETag: ['"6b419a72158087c70b993a81a2e3dd48"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
+- request:
+    body: null
+    headers:
+      Connection: [close]
+      Host: [datatracker.ietf.org]
+      User-Agent: [Python-urllib/3.7]
+    method: GET
+    uri: https://datatracker.ietf.org/doc/rfchello2134hello/bibtex/
+  response:
+    body: {string: "\n<!DOCTYPE html> \n\n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/base.html\
+        \ -->\n\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\">\n    <meta\
+        \ http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <title>404 Not\
+        \ Found</title>\n    <meta name=\"viewport\" content=\"width=device-width,\
+        \ initial-scale=1\">\n\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptmono/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptsans/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    <link href=\"https://www.ietf.org/lib/dt/6.93.0/ptserif/stylesheet.css\"\
+        \ rel='stylesheet' type='text/css'>\n    \n\n    <link rel=\"stylesheet\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/font-awesome/css/font-awesome.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/css/bootstrap-theme.min.css\"\
+        >\n    <link rel=\"stylesheet\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/css/ietf.css\"\
+        >\n    \n    <style>\n     \n    </style>\n\n    <!--[if lt IE 9]>\n     \
+        \   <script src=\"https://www.ietf.org/lib/dt/6.93.0/html5shiv/html5shiv.min.js\"\
+        ></script>\n        <script src=\"https://www.ietf.org/lib/dt/6.93.0/respond/dest/respond.min.js\"\
+        ></script>\n    <![endif]-->\n    \n\n    \n    <link rel=\"shortcut icon\"\
+        \ href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietf-icon-blue3.png\"\
+        >\n    \n    <link rel=\"apple-touch-icon\" href=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/apple-touch-icon.png\"\
+        >\n  </head>\n\n  <body  data-group-menu-data-url=\"/group/groupmenu.json\"\
+        >\n      <nav class=\"navbar navbar-inverse navbar-fixed-top\">\n        <div\
+        \ class=\"container-fluid\">\n\t  <div class=\"navbar-header\">\n\t    <button\
+        \ type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\"\
+        #navbar-collapse\">\n\t      <span class=\"sr-only\">Toggle navigation</span>\n\
+        \t      <span class=\"icon-bar\"></span>\n\t      <span class=\"icon-bar\"\
+        ></span>\n\t      <span class=\"icon-bar\"></span>\n\t    </button>\n\t  \
+        \  <a class=\"navbar-brand\" href=\"/\">\n\t       <img alt=\"IETF Logo\"\
+        \ src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo-small-transparent.png\"\
+        >\n\t       \n\t\t  \n\t\t  Datatracker\n\t\t  \n\t       \n\t    </a>\n\t\
+        \  </div>\n\n\t  <noscript>\n\t    <p class=\"navbar-text\"><small>Enable\
+        \ Javascript for full functionality.</small></p>\n\t  </noscript>\n\n\t  <div\
+        \ class=\"collapse navbar-collapse\" id=\"navbar-collapse\">\n\t    <ul class=\"\
+        hidden-nojs nav navbar-nav\">\n              <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu.html\
+        \ -->\n\n\n\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Groups\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/wg/\">Active WGs</a></li>\n\
+        \  <li><a href=\"/rg/\">Active RGs</a></li>\n  <li class=\"dropdown-submenu\
+        \ group-menu\"><a href=\"/group/\">Other</a><!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_active_groups.html\
+        \ -->\n<ul class=\"dropdown-menu\" role=\"menu\">\n\n  <li>\n    <a href=\"\
+        /ag/\">Active AGs</a>\n  </li>\n\n  <li>\n    <a href=\"/area/\">Active Areas</a>\n\
+        \  </li>\n\n  <li>\n    <a href=\"/dir/\">Active Directorates</a>\n  </li>\n\
+        \n  <li>\n    <a href=\"/program/\">Active Programs</a>\n  </li>\n\n  <li>\n\
+        \    <a href=\"/team/\">Active Teams</a>\n  </li>\n\n</ul>\n </li>\n\n  <li\
+        \ class=\"divider hidden-xs\"></li>\n  <li class=\"dropdown-header visible-lg-block\"\
+        >By area/parent</li>\n        <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_wg.html\
+        \ -->\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-2010\"\
+        >\n    <a href=\"/wg/#art\">Applications and Real-Time</a>\n  </li>\n\n  <li\
+        \ class=\"hidden-nojs dropdown-submenu group-menu group-parent-1008\">\n \
+        \   <a href=\"/wg/#gen\">General</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1052\">\n    <a href=\"/wg/#int\"\
+        >Internet</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1193\">\n    <a href=\"/wg/#ops\">Ops &amp; Mgmt</a>\n  </li>\n\
+        \n  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-1249\"\
+        >\n    <a href=\"/wg/#rtg\">Routing</a>\n  </li>\n\n  <li class=\"hidden-nojs\
+        \ dropdown-submenu group-menu group-parent-1260\">\n    <a href=\"/wg/#sec\"\
+        >Security</a>\n  </li>\n\n  <li class=\"hidden-nojs dropdown-submenu group-menu\
+        \ group-parent-1324\">\n    <a href=\"/wg/#tsv\">Transport</a>\n  </li>\n\n\
+        \  <li class=\"hidden-nojs dropdown-submenu group-menu group-parent-3\">\n\
+        \    <a href=\"/rg/\">IRTF</a>\n  </li>\n\n\n        \n\n  <li class=\"divider\
+        \ hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">New work</li>\n\
+        \  <li><a href=\"/group/chartering/\">Chartering groups</a></li>\n  <li><a\
+        \ href=\"/wg/bofs/\">BOFs</a></li>\n\n  <li class=\"divider hidden-xs\"></li>\n\
+        \  <li class=\"dropdown-header hidden-xs\">Other groups</li>\n  <li><a href=\"\
+        /group/concluded/\">Concluded groups</a></li>\n  <li><a href=\"/list/nonwg\"\
+        >Non-WG lists</a></li>\n\n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\"\
+        \ class=\"dropdown-toggle\" data-toggle=\"dropdown\">\n  \n  Documents\n \
+        \ \n    </a>\n    <ul class=\"dropdown-menu\" role=\"menu\">\n  \n  <li><a\
+        \ href=\"/doc/search\">Search</a></li>\n  <li><a href=\"/doc/recent\">Recent\
+        \ drafts</a></li>\n  <li><a href=\"/submit/\">Draft submission</a></li>\n\n\
+        \  \n    <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfchello2134hello/bibtex/\"\
+        >Sign in to track docs</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n\n  <li class=\"\
+        divider hidden-xs\"></li>\n  <li class=\"dropdown-header hidden-xs\">RFC streams</li>\n\
+        \        <li><a href=\"/stream/iab/\">IAB</a></li>\n        <li><a href=\"\
+        /stream/irtf/\">IRTF</a></li>\n        <li><a href=\"/stream/ise/\">ISE</a></li>\n\
+        \n</ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Meetings\n  \n    </a>\n    <ul class=\"\
+        dropdown-menu\" role=\"menu\">\n  \n\n  <li><a href=\"/meeting/agenda/\">Agenda</a></li>\n\
+        \  <li><a href=\"/meeting/materials/\">Materials</a></li>\n  <li><a href=\"\
+        /meeting/floor-plan/\">Floor plan</a></li>\n  <li><a href=\"/meeting/important-dates/\"\
+        >Important dates</a></li>\n  <li><a href=\"https://www.ietf.org/meeting/proceedings.html\"\
+        >Past proceedings</a></li>\n  <li><a href=\"/meeting/upcoming\">Upcoming</a></li>\n\
+        \  <li><a href=\"/meeting/past\">Past</a></li>\n  <li><a href=\"/secr/sreq/\"\
+        >Request a session</a></li>\n  <li><a href=\"/meeting/requests\">Session requests</a></li>\n\
+        </ul>\n\n<li class=\"dropdown\">\n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n  \n  Other\n  \n    </a>\n    <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  <li><a href=\"/ipr/\">IPR disclosures</a></li>\n\
+        \  <li><a href=\"/liaison/\">Liaison statements</a></li>\n  <li><a href=\"\
+        /iesg/agenda/\">IESG agenda</a></li>\n  <li><a href=\"/nomcom/\">NomComs</a></li>\n\
+        \  <li><a href=\"/doc/downref/\">Downref registry</a></li>\n  <li class=\"\
+        dropdown-submenu\">\n    <a href=\"/stats/\">Statistics</a>\n    <ul class=\"\
+        dropdown-menu\">\n      <li><a href=\"/stats/document/\">Drafts/RFCs</a></li>\n\
+        \      <li><a href=\"/stats/meeting/\">Meetings</a></li>\n      \n    </ul>\n\
+        \  </li>\n  <li><a href=\"/group/edu/materials/\">Tutorials</a></li>\n  <li><a\
+        \ href=\"/api/\">API Help</a></li>  \n  <li><a href=\"/release/\">Release\
+        \ notes</a></li>\n  <li class=\"divider hidden-xs\"></li>\n  <li><a href=\"\
+        https://tools.ietf.org/tools/ietfdb/newticket\"><span class=\"fa fa-bug\"\
+        ></span> Report a bug</a></li>\n</ul>\n\n\n  <!-- template: /a/www/ietf-datatracker/web/ietf/templates/base/menu_user.html\
+        \ -->\n\n\n<li class=\"dropdown\">\n  \n  <a href=\"#\" class=\"dropdown-toggle\"\
+        \ data-toggle=\"dropdown\">\n     User \n  </a>\n  <ul class=\"dropdown-menu\"\
+        \ role=\"menu\">\n  \n\n  \n    \n      <li><a rel=\"nofollow\" href=\"/accounts/login/?next=/doc/rfchello2134hello/bibtex/\"\
+        >Sign in</a></li>\n      <li><a rel=\"nofollow\" href=\"/accounts/reset/\"\
+        >Password reset</a></li>\n      <li><a href=\"/accounts/settings/\" rel=\"\
+        nofollow\">Preferences</a></li>\n    \n    <li><a href=\"/help/personal-information\"\
+        >Handling of personal information</a></li>  \n  \n\n  \n    <li><a href=\"\
+        /accounts/create/\">New account</a></li>\n  \n\n  \n\n  \n\n  \n\n  \n\n \
+        \ \n</ul>\n\n\n\n            </ul>\n\n\t    <form class=\"navbar-form navbar-right\
+        \ hidden-xs\" action=\"/doc/search/\">\n\t      <div class=\"form-group\"\
+        >\n\t        <input class=\"form-control input-sm\" type=\"text\" name=\"\
+        name\" placeholder=\"Document search\" required>\n\t        <input type=\"\
+        hidden\" name=\"activedrafts\" value=\"on\">\n\t        <input type=\"hidden\"\
+        \ name=\"rfcs\" value=\"on\">\n\t      </div>\n\t    </form>\n\t  </div>\n\
+        \        </div>\n      </nav>\n      <div class=\"container-fluid\">\n   \
+        \     \n        \n        \n\t  <div class=\"col-md-12 col-sm-12\" id=\"content\"\
+        >\n        \n        \n\n  <img class=\"ietflogo\" src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/images/ietflogo.png\"\
+        \ alt=\"IETF\" style=\"width: 10em\">\n  <div class='alert'>\n\n    <h2>The\
+        \ page you were looking for couldn't be found.</h2>\n\n\n    <p> The requested\
+        \ URL was not found on this server. If you entered the URL\n      manually\
+        \ please check your spelling and try again.</p>\n\n    <p>If you think this\
+        \ is a server error, please contact <a href=\"mailto:datatracker-project@ietf.org\"\
+        >datatracker-project@ietf.org</a>.</p>\n\n  </div>\n\n        \n        \n\
+        \t  </div>\n        \n\n\t\n\t<hr>\n\t  <div class=\"col-md-12 col-sm-12\"\
+        >\n\t    <div class=\"text-center padded\">\n\t        <a href=\"https://www.internetsociety.org/\"\
+        \ class=\"padded\">ISOC</a>\n\t        <a href=\"https://trustee.ietf.org/\"\
+        \ class=\"padded\">IETF&nbsp;Trust</a>\n\t        <a href=\"https://www.rfc-editor.org/\"\
+        \ class=\"padded\">RFC&nbsp;Editor</a>\n\t        <a href=\"https://www.irtf.org/\"\
+        \ class=\"padded\">IRTF</a>\n\t        <a href=\"https://www.ietf.org/iesg/\"\
+        \ class=\"padded\">IESG</a>\n\t        <a href=\"https://www.ietf.org/\" class=\"\
+        padded\">IETF</a>\n\t        <a href=\"https://www.iab.org/\" class=\"padded\"\
+        >IAB</a>\n\t        <a href=\"https://iaoc.ietf.org\" class=\"padded\">IASA&nbsp;&amp;&nbsp;IAOC</a>\n\
+        \t        <a href=\"https://tools.ietf.org/\" class=\"padded\">IETF&nbsp;Tools</a>\n\
+        \t        <a href=\"https://www.iana.org/\" class=\"padded\">IANA</a>\n\t\
+        \    </div>\n\t  </div>\n\n\n        <footer class=\"row col-md-12 col-sm-12\"\
+        >\n\t  <div class=\"col-md-12\">\n\t    <div class=\"text-center\">\n\t  \
+        \    <p class=\"small text-muted\">\n\t        \n\t\t  <a href=\"/release/about\"\
+        >About</a> |\n\t          IETF Datatracker |\n\t          <a href=\"/release/6.93.0.p1/\"\
+        >Version 6.93.0.p1</a> |\n\t          2019-03-06 |\n\t        \n\t\tReport\
+        \ a bug:\n\t        <a href=\"https://tools.ietf.org/tools/ietfdb/newticket\"\
+        >Tracker:<span class=\"fa fa-bug\"></span></a>\n\t        <a href=\"mailto:datatracker-project@ietf.org\"\
+        >Email:<span class=\"fa fa-envelope\"></span></a>\n\t\t<br>\n\t\t  Python\
+        \ 2.7.13 |\n\t\t  Django 1.11.20\n\t      </p>\n\t    </div>\n\t  </div>\n\
+        \        </footer>\n\t\n\n      </div>\n\n      \n<!-- template: /a/www/ietf-datatracker/web/ietf/templates/debug.html\
+        \ -->\n\n\n\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery/jquery.min.js\"\
+        ></script>\n      \n      <script>$(\".visible-nojs\").removeClass(\"visible-nojs\"\
+        );</script>\n      <script>$(\".hidden-nojs\").removeClass(\"hidden-nojs\"\
+        );</script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/jquery.cookie/jquery.cookie.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/bootstrap/js/bootstrap.min.js\"\
+        ></script>\n      <script src=\"https://www.ietf.org/lib/dt/6.93.0/ietf/js/ietf.js\"\
+        ></script>\n      \n      \n  </body>\n</html>\n\n"}
+    headers:
+      Connection: [close]
+      Content-Security-Policy: ['default-src ''self'' ''unsafe-inline'' data: https://datatracker.ietf.org/
+          https://www.ietf.org/;']
+      Content-Type: [text/html; charset=utf-8]
+      Date: ['Wed, 06 Mar 2019 23:26:18 GMT']
+      ETag: ['"ae3e0d6e1c112884b23ad84b77402544"']
+      Server: [Apache]
+      Strict-Transport-Security: [max-age=31536000]
+      Transfer-Encoding: [chunked]
+      Vary: ['Cookie,Accept-Encoding']
+      X-Content-Type-Options: [nosniff]
+      X-Frame-Options: [SAMEORIGIN, SAMEORIGIN]
+      X-Xss-Protection: [1; mode=block]
+    status: {code: 404, message: Not Found}
 version: 1
