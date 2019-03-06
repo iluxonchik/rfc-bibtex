@@ -76,16 +76,6 @@ class RFCBibtex(object):
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
 
-    @staticmethod
-    def _rfc_key_function(name):
-        """Turn RFC32 into RFC00032 for sorting. This needs to be a staticmethod because it is called as a function from sorted()."""
-        try:
-            if name.upper().startswith('RFC'):
-                return "RFC{:05d}".format( int(name[3:]))
-        except (ValueError,TypeError) as e:
-            raise BadRFCNumberException(name)
-        return name
-        
     @property
     def bibtex_entries(self):
         # remove Nones (errors returned by urllib), so that they're not printed
@@ -96,19 +86,13 @@ class RFCBibtex(object):
             return [line.strip() for line in f ]
 
     def _read_ids_from_aux_file(self, filename):
-        sort_entries = False # TODO: not yet implemented
         with open(filename, 'r') as f:
             rfcs = list([m.group(1) for line in f for m in [self.AUX_CITATION_RE.search(line)] if m])
-            if sort_entries:
-                rfcs = sorted(rfcs, key=self._rfc_key_function)
         return rfcs
 
     def _read_ids_from_tex_file(self, filename):
-        sort_entries = False # TODO: not yet implemented
         with open(filename, 'r') as f:
             rfcs = list([m.group(1) for line in f for m in [self.TEX_CITATION_RE.search(line)] if m])
-            if sort_entries:
-                rfcs = sorted(rfcs, key=self._rfc_key_function)
         return rfcs
 
     def _read_ids_from_file(self, filename):

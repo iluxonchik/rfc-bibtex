@@ -13,7 +13,7 @@ NOTE: the tests are written with the migrations that will be done in considerati
       tests were adapted to work in both of them. This is why some assertions might
       seem like incomplete. Later, the tests should and will be refactored.
 """
-class TestObtainedBibtexFromTexAndAuxFiles(BaseRFCBibTexIntegrationTestCase):
+class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase):
     TLS_RFCS_FILE_AUX = BaseRFCBibTexIntegrationTestCase.TEST_RESOURCES_PATH + "tls_rfcs.aux"
     TLS_RFCS_FILE_INVALID_IDS_AUX = BaseRFCBibTexIntegrationTestCase.TEST_RESOURCES_PATH + "tls_rfcs_invalid_ids.aux"
     TLS_RFCS_FILE_NON_EXISTING_IDS_AUX = BaseRFCBibTexIntegrationTestCase.TEST_RESOURCES_PATH + "tls_rfcs_non_existing_ids.aux"
