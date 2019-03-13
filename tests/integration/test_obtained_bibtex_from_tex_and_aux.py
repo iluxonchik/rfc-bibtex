@@ -29,7 +29,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_aux_file_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_AUX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_AUX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -47,7 +47,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_tex_file_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_TEX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_TEX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -68,7 +68,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
         """
         Test that invalid RFC/draft IDs don't break the program.
         """
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_INVALID_IDS_AUX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_INVALID_IDS_AUX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -89,7 +89,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
         """
         Test that non-exsting RFC/draft IDs don't break the program.
         """
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_NON_EXISTING_IDS_AUX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_NON_EXISTING_IDS_AUX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -110,7 +110,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
         """
         Test that invalid RFC/draft IDs don't break the program.
         """
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_INVALID_IDS_TEX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_INVALID_IDS_TEX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -132,7 +132,7 @@ class ObtainedBibtexFromTexAndAuxFilesTestCase(BaseRFCBibTexIntegrationTestCase)
         """
         Test that non-exsting RFC/draft IDs don't break the program.
         """
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE_NON_EXISTING_IDS_TEX)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE_NON_EXISTING_IDS_TEX])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])

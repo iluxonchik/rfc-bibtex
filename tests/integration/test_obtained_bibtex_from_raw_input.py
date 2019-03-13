@@ -44,7 +44,7 @@ class ObtainedBibtexFromRawRFCInputTestCase(BaseRFCBibTexIntegrationTestCase):
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_file_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_FILE)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_FILE])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -62,7 +62,7 @@ class ObtainedBibtexFromRawRFCInputTestCase(BaseRFCBibTexIntegrationTestCase):
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_with_invalid_ids_from_file_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_INVALID_IDS_FILE)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_INVALID_IDS_FILE])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
@@ -80,7 +80,7 @@ class ObtainedBibtexFromRawRFCInputTestCase(BaseRFCBibTexIntegrationTestCase):
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_with_non_existing_ids_from_file_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(in_file_name=self.TLS_RFCS_NON_EXISTING_IDS_FILE)
+        rfc_bibtex = RFCBibtex(in_file_names=[self.TLS_RFCS_NON_EXISTING_IDS_FILE])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
         self.assertIn("RFC5246", entries[0])
