@@ -64,6 +64,12 @@ class RFCBibtex(object):
             for in_file_name in in_file_names:
                 self._id_names += self._read_ids_from_file(in_file_name)
 
+        self._id_names = self._remove_duplicate_ids(self._id_names)
+    
+    def _remove_duplicate_ids(self, id_names):
+        return list(set([id_name.lower() for id_name in id_names]))
+
+
     @property
     def bibtex_entries(self):
         # remove Nones (errors returned by urllib), so that they're not printed
