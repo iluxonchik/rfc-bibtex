@@ -7,27 +7,10 @@ import urllib.error
 import random
 
 from .exceptions import BadIDNameException, URLFetchException, BadRFCNumberException
-from .utils import print_err_red
+from .utils import print_red, print_yellow
 from .parser import Parser
+from .errors import Errors
 
-"""
-TODO:
-1. update URL_FMT
-https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=I-D&number=draft-ietf-tls-tls13-22
-https://datatracker.ietf.org/doc/draft-ietf-tls-tls13/22/bibtex/
-
-https://sysnetgrp.no-ip.org/rfc/rfcbibtex.php?type=rfc&number=8446
-https://datatracker.ietf.org/doc/rfc8446/bibtex/
-
-* when getting internet drafts, the returned @misc id is different from the name of id of the draft, thus
-   it needs to be adapted (overriden)
-* if the draft is provided without a version, the latest version of it is returned.
-  It might even happen that that version is an RFC! Thus, this needs to be treated appropriately.
-  if the user is using drafts without ID, allow it to go through, override the name in @misc, BUT WARN THE USER WITH YELLOW that it's recommened to provide the
-  if the user is using drafts without ID and an RFC is returned, allow it to go through, override the name in @misc, BUT WARN THE USER WITH RED.
-
-
-"""
 
 class RFCBibtex(object):
 
@@ -68,10 +51,14 @@ class RFCBibtex(object):
 
         # list of provided draft ids that do not explicity declare a version
         self._id_drafts_without_version_list = []
-        self._id_drafts_promoted_to_rfc = []
+
+        # TODO: this approach adds up a massive tech debt, but its reduction will be done during
+        #       the refactoring task
+        self._errors = Errors()
 
         self._draft_version_re = re.compile(r"(?P<id>.+)-(?P<version>\d+)$")
         self._bibtex_id_re = re.compile(r"@\w+{(?P<bibtex_id>.+?),")
+        self._updated_id_re = re.compile(r'%% You should probably cite (?P<new_id>(rfc|draft)[-\d\w]+)')
 
         if in_file_name is not None:
             self._id_names += self._read_ids_from_file(in_file_name)
@@ -118,42 +105,47 @@ class RFCBibtex(object):
 
     def _print_errors(self):
         if self._id_name_err_list:
-            print_err_red('ERROR in the following ID names (ignored):\n')
+            print_red('ERROR in the following ID names:', file=sys.stderr)
             for id_name in self._id_name_err_list:
-                print('\t* {}'.format(id_name), file=sys.stderr)
+                print_red('\t* {}'.format(id_name), file=sys.stderr)
 
         if self._remote_fetch_err_list:
-            print_err_red('ERRORS in fetching from the URLs (ignored):\n')
+            print_red('ERRORS in fetching from the URLs:\n', file=sys.stderr)
             for err_tuple in self._remote_fetch_err_list:
                 type_name = err_tuple[0] if err_tuple[0] == self.ID_TYPE_RFC else 'Internet Draft'
                 print('\t* Type:{} | ID:{} | URL:{}'.format(type_name, err_tuple[1], err_tuple[2]), file=sys.stderr)
 
     def _print_no_explicit_version_warnings(self):
         if self._id_drafts_without_version_list:
-            print('WARNING')
-            print(
-            """
-            If the draft version is not explicitly defined in the draft ID, the latest one will be obtained,
-            which may be an RFC ID, in case the draft has been assigned one. If the latter happens, you will receive a
-            separate warning of the drafts that are now in the RFC stage. It is highly recommended to define the draft ID
-            explicitly, since there may be major document differences between two draft versions.
-            """)
-            print('No explicit version has been defined for following draft ids:')
+            print_yellow('WARNING', file=sys.stderr)
+            print_yellow('If the draft version is not explicitly defined in the draft ID, the latest one will be obtained,\n'
+                  'which may be an RFC ID, in case the draft has been assigned one. If the latter happens, you will receive a\n'
+                  'separate warning of the drafts that are now in the RFC stage. It is highly recommended to define the draft ID\n'
+                  'explicitly, since there may be major document differences between two draft versions.\n', file=sys.stderr)
+            print_yellow('No explicit version has been defined for following draft ids:', file=sys.stderr)
             for draft_id in self._id_drafts_without_version_list:
-                print('\t{draft_id}'.format(draft_id))
+                print_yellow('\t* {}'.format(draft_id), file=sys.stderr)
 
-    def _print_drafts_updated_to_rfcs(self):
-        if self._id_drafts_promoted_to_rfc:
-            print('WARNING')
-            print("The following drafts without an explicitly provided version have been assigned an RFC number:")
-            for draft_id in self._id_drafts_promoted_to_rfc:
-                print('\t{draft_id}'.format(draft_id))
-    
     def _print_urllib_errors(self):
         if self._urllib_err_list:
-            print('Errors when fetching the following URLs: ')
+            print_red('Errors when fetching the following URLs: ', file=sys.stderr)
             for url in self._urllib_err_list:
-                print('\t{}'.format(url))
+                print_red('\t* {}'.format(url), file=sys.stderr)
+    
+    def _print_updated_id_errors(self):
+        # TODO: find a more elegant way of testing if an iterator has elements
+        rfc_errors = list(self._errors.draft_updated_to_rfc)
+        draft_errors = list(self._errors.draft_updated_to_draft)
+
+        if draft_errors:
+            print_yellow('The following drafts have been updated to a new draft version:', file=sys.stderr)
+            for updated_entity in draft_errors:
+                print_yellow('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
+
+        if rfc_errors:
+            print_red('The following drafts have been updated to an RFC:', file=sys.stderr)
+            for updated_entity in rfc_errors:
+                print_red('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
 
     def generate_bibtex(self):
         if self._out_file_name is not None:
@@ -162,8 +154,9 @@ class RFCBibtex(object):
         else:
             self._generate_bibtex(sys.stdout)
 
+        # TODO: refactor error collection and printing
         self._print_no_explicit_version_warnings()
-        self._print_drafts_updated_to_rfcs()
+        self._print_updated_id_errors()
         self._print_errors()
         self._print_urllib_errors()
 
@@ -182,19 +175,22 @@ class RFCBibtex(object):
             """
             bibtex_id = self._get_id_from_bibtex(response)
             new_response = re.sub(bibtex_id, id_name, response, count=1)
-            
-            if self._id_is_rfc(bibtex_id):
-                self._id_drafts_promoted_to_rfc.append(id_name)
-
             return new_response
         else:
             # id is neither RFC, nor draft, this should nenver happen
             raise Exception("Unexpected entry id: {id_name}. Expecting either an RFC or a draft".format(id_name))
-        
+    
+    def _collect_updated_ids(self, old_id, response):
+        match = self._updated_id_re.search(response)
+        if match:
+            new_id = match.group('new_id')
+            self._errors.add_updated_entity(old_id, new_id)
+    
     def get_bibtex_from_id(self, id_name):
         try:
             url, id_type, id_name = self._get_url_from_id_name(id_name)
             response = self._get_response_from_url(url)
+            self._collect_updated_ids(id_name, response)
             # override ids for drafts
             response = self._replace_bibtex_name_if_needed(response, id_name)
         except urllib.error.HTTPError:
