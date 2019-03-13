@@ -38,7 +38,7 @@ class RFCBibtex(object):
     TEX_EXTENSION = '.tex'
     AUX_EXTENSION = '.aux'
 
-    def __init__(self, id_names=None, in_file_name=None, out_file_name=None):
+    def __init__(self, id_names=None, in_file_names=None, out_file_name=None):
         if id_names is None:
             id_names = []
 
@@ -60,8 +60,9 @@ class RFCBibtex(object):
         self._bibtex_id_re = re.compile(r"@\w+{(?P<bibtex_id>.+?),")
         self._updated_id_re = re.compile(r'%% You should probably cite (?P<new_id>(rfc|draft)[-\d\w]+)')
 
-        if in_file_name is not None:
-            self._id_names += self._read_ids_from_file(in_file_name)
+        if in_file_names:
+            for in_file_name in in_file_names:
+                self._id_names += self._read_ids_from_file(in_file_name)
 
     @property
     def bibtex_entries(self):
@@ -269,7 +270,7 @@ def run():
     if len(sys.argv) < 2:
         parser.print_help()
 
-    obj = RFCBibtex(parser.inline_args, parser.in_file, parser.out_file)
+    obj = RFCBibtex(parser.inline_args, parser.in_files, parser.out_file)
     obj.generate_bibtex()
 
 if __name__ == '__main__':

@@ -9,7 +9,7 @@ class Parser(object):
         return self._inline_args
 
     @property
-    def in_file(self):
+    def in_files(self):
         return self._in_file
 
     @property
@@ -22,10 +22,14 @@ class Parser(object):
 
     def build_parser(self):
             """Setup and return the argument parser."""
-            parser = argparse.ArgumentParser(description='Generate Bibtex entries for IETF RFCs and Internet-Drafts. Titles are output to preserve the original capitalization.')
-            parser.add_argument('inline_args', nargs='*', help='list of RFC and/or Internet-Draft IDs, in any order.', default=[])
-            parser.add_argument('-f', '--file', default=None, metavar='FILE_NAME', nargs=1, help='read list of RFC and/or Internet-Draft IDs (one per line) from a file')
-            parser.add_argument('-o', '--output', default=None, metavar='FILE_NAME', nargs=1, help='output the resulting bibtex to a file')
+            parser = argparse.ArgumentParser(description='Generate BibTex entries for IETF RFCs and Internet Drafts. The list of IDs can be read from a file '
+                                                         '(including .tex and .aux) or directly from command-line arguments.')
+            parser.add_argument('inline_args', nargs='*', help='list of RFC and/or Internet Draft IDs, in any order.', default=[])
+            parser.add_argument('-f', '--files', default=[], metavar='FILE_NAMES', nargs='+', help='read list of RFC and/or Internet Draft IDs from a file. ' 
+                                'Supported file formats are the following: .tex, .aux and .txt (one ID per line). '
+                                'If a file with any other extension is provided, the tool attempts to read it as a .txt file, '
+                                'containing one ID per line.')
+            parser.add_argument('-o', '--output', default=None, metavar='FILE_NAME', nargs=1, help='output the resulting BibTex to a file')
             self._parser = parser
 
             return parser
@@ -37,7 +41,7 @@ class Parser(object):
         # Bind command line args to global vars
         self._inline_args = args.inline_args
 
-        self._in_file = args.file[0] if args.file is not None else None
+        self._in_file = args.files
         self._out_file = args.output[0] if args.output is not None else None
 
         return self
