@@ -9,7 +9,7 @@ setuptools.setup(
     version='0.3.0',
     author='Illya Gerasymchuk',
     author_email='illya@iluxonchik.me',
-    description='Generate Bibtex entries for IETF RFCs and Internet-Drafts.',
+    description='Generate Bibtex entries for IETF RFCs and Internet Drafts.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url = 'https://github.com/iluxonchik/rfc-bibtex/',
