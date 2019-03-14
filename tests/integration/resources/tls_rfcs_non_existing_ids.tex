@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Simple Tex File For Integration Tests of RFCBitex Project}
+\author{iluxonchik }
+\date{March 2019}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+There is nothing special here, nothing fancy, just a document with a few citations, like
+\cite{RFC5246} this one. This one here \cite{the-documentary-2005} should not be parsed.
+While this one \cite{draft-ietf-tls-tls13-21} \cite{draft-of-the-encore-album} should. And finally, let's cite the
+TLS 1.3 RFC \cite{RFC8446} \cite{RFC99999999} \cite{RFC00012}. Well, that's it folks. At least for now... This is a very basic
+file, just to test if \textbf{the basic} latex parsing is working.
+
+You can find the RFCBitex project here: https://github.com/iluxonchik/rfc-bibtex
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=1.7]{universe}
+\caption{The Universe}
+\label{fig:universe}
+\end{figure}
+
+\section{Conclusion}
+``The Choronic is a gereat album'' \citep{adams1995hitchhiker}
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
