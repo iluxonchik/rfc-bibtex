@@ -64,6 +64,14 @@ class RFCBibtex(object):
             for in_file_name in in_file_names:
                 self._id_names += self._read_ids_from_file(in_file_name)
 
+        self._id_names = self._remove_duplicate_ids_preserving_order(self._id_names)
+    
+    def _remove_duplicate_ids_preserving_order(self, id_names):
+        id_names_without_duplicates = set()
+        # local var resoluiton is faster
+        add_meth = id_names_without_duplicates.add
+        return [x for x in id_names if not (x in id_names_without_duplicates or add_meth(x))]
+
     @property
     def bibtex_entries(self):
         # remove Nones (errors returned by urllib), so that they're not printed
@@ -106,12 +114,12 @@ class RFCBibtex(object):
 
     def _print_errors(self):
         if self._id_name_err_list:
-            print_red('ERROR in the following ID names:', file=sys.stderr)
+            print_red('The following identifier names are invalid:', file=sys.stderr)
             for id_name in self._id_name_err_list:
                 print_red('\t* {}'.format(id_name), file=sys.stderr)
 
         if self._remote_fetch_err_list:
-            print_red('ERRORS in fetching from the URLs:\n', file=sys.stderr)
+            print_red('Errors in fetching from the following URLs:\n', file=sys.stderr)
             for err_tuple in self._remote_fetch_err_list:
                 type_name = err_tuple[0] if err_tuple[0] == self.ID_TYPE_RFC else 'Internet Draft'
                 print('\t* Type:{} | ID:{} | URL:{}'.format(type_name, err_tuple[1], err_tuple[2]), file=sys.stderr)

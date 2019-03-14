@@ -1,0 +1,8 @@
+-i https://pypi.org/simple
+idna==2.8
+multidict==4.5.2
+pyyaml==5.1
+six==1.12.0
+vcrpy==2.0.1
+wrapt==1.11.1
+yarl==1.3.0 ; python_version >= '3.4'
