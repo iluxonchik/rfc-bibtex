@@ -14,7 +14,11 @@ Duplicate entires are filtered out.
 
 You can use `pip` to install this command-line tool:
 
-    pip install rfc-bibtex
+    pip install rfcbibtex
+
+or `pipenv`:
+
+    pipenv install rfcbibtex
 
 Alternatively, you can clone this repository or download the `rfc-bibtex.py`. This tool has no
 external dependencies, so as long as you have `Python 3.x` installed, everything
