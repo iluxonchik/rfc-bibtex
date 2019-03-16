@@ -18,7 +18,7 @@ class RFCBibtex(object):
     URL_FMT_DRAFT                         = 'https://datatracker.ietf.org/doc/{id_name}/{version}/bibtex/'
     URL_ERROR_MSG = 'Failed to read RFC or Internt-Draft resource'
     ID_TYPE_RFC   = 'rfc'
-    ID_TYPE_INTERNET_DRAFT = ['draft', 'ietf']
+    ID_TYPE_INTERNET_DRAFT = 'draft'
 
     USER_AGENTS = ['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
                    'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36',
@@ -56,7 +56,7 @@ class RFCBibtex(object):
         #       the refactoring task
         self._errors = Errors()
 
-        self._draft_version_re = re.compile(r"(?P<id>.+)-(?P<version>\d+)$")
+        self._draft_version_re = re.compile(r"(?P<id>.+)-(?P<version>\d+)$", re.I)
         self._bibtex_id_re = re.compile(r"@\w+{(?P<bibtex_id>.+?),")
         self._updated_id_re = re.compile(r'%% You should probably cite (?P<new_id>(rfc|draft)[-\d\w]+)')
 
@@ -133,7 +133,7 @@ class RFCBibtex(object):
                   'explicitly, since there may be major document differences between two draft versions.\n', file=sys.stderr)
             print_yellow('No explicit version has been defined for following draft ids:', file=sys.stderr)
             for draft_id in self._id_drafts_without_version_list:
-                print_yellow('\t* {}'.format(draft_id), file=sys.stderr)
+                print_yellow('\t* {}'.format(draft_id.lower()), file=sys.stderr)
 
     def _print_urllib_errors(self):
         if self._urllib_err_list:
@@ -149,12 +149,12 @@ class RFCBibtex(object):
         if draft_errors:
             print_yellow('The following drafts have been updated to a new draft version:', file=sys.stderr)
             for updated_entity in draft_errors:
-                print_yellow('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
+                print_yellow('\t* {} --> {}'.format(updated_entity.old_id.lower(), updated_entity.new_id), file=sys.stderr)
 
         if rfc_errors:
             print_red('The following drafts have been updated to an RFC:', file=sys.stderr)
             for updated_entity in rfc_errors:
-                print_red('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
+                print_red('\t* {} --> {}'.format(updated_entity.old_id.lower(), updated_entity.new_id), file=sys.stderr)
 
     def generate_bibtex(self):
         if self._out_file_name is not None:
@@ -175,14 +175,8 @@ class RFCBibtex(object):
         return res
 
     def _replace_bibtex_name_if_needed(self, response, id_name):
-        if (self._id_is_rfc(id_name)):
-            return response
-        elif (self._id_is_draft(id_name)):
-            """
-            1. prepend "draft" to the id retuned by bubtex
-               1.1 if the returned string is an RFC, add id_name to warning list
-            """
-            bibtex_id = self._get_id_from_bibtex(response)
+        bibtex_id = self._get_id_from_bibtex(response)
+        if (self._id_is_rfc(id_name) or self._id_is_draft(id_name)):
             new_response = re.sub(bibtex_id, id_name, response, count=1)
             return new_response
         else:
@@ -232,11 +226,11 @@ class RFCBibtex(object):
 
     @staticmethod
     def _id_is_draft(id_name):
-        return id_name.startswith(RFCBibtex.ID_TYPE_INTERNET_DRAFT[0]) or id_name.startswith(RFCBibtex.ID_TYPE_INTERNET_DRAFT[1])
+        return bool(re.match(RFCBibtex.ID_TYPE_INTERNET_DRAFT, id_name, re.I))
     
     @staticmethod
     def _id_is_rfc(id_name):
-        return id_name.startswith(RFCBibtex.ID_TYPE_RFC)
+        return bool(re.match(RFCBibtex.ID_TYPE_RFC, id_name, re.I))
     
     def _get_id_from_bibtex(self, bibtex):
         match = self._bibtex_id_re.search(bibtex)
@@ -245,7 +239,6 @@ class RFCBibtex(object):
         raise BadIDNameException('Could not parse id of the bibtex: {}'.format(bibtex))
 
     def _get_url_from_id_name(self, id_name):
-        id_name = id_name.lower()
         id_type = None # needed for error reporting
 
         if self._id_is_rfc(id_name):

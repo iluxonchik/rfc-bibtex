@@ -26,10 +26,10 @@ class ObtainedBibtexFromRawRFCInputTestCase(BaseRFCBibTexIntegrationTestCase):
 
     @vcr.use_cassette(path='tests/integration/resources/fixtures/vcr_cassettes/synopsis.yaml', record_mode='new_episodes')
     def test_reading_rfcs_from_command_line_returns_expected_latex(self):
-        rfc_bibtex = RFCBibtex(['RFC5246', 'draft-ietf-tls-tls13-21', 'RFC8446'])
+        rfc_bibtex = RFCBibtex(['rfc5246', 'draft-ietf-tls-tls13-21', 'RFC8446'])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
-        self.assertIn("RFC5246", entries[0])
+        self.assertIn("rfc5246", entries[0])
         self.assertIn("The Transport Layer Security (TLS) Protocol Version 1.2", entries[0])
         self.assertIn("2008", entries[0])
         self.assertIn("RFC Editor", entries[0])
@@ -101,15 +101,15 @@ class ObtainedBibtexFromRawRFCInputTestCase(BaseRFCBibTexIntegrationTestCase):
         """
         Test that invalid RFC/draft IDs don't break the program.
         """
-        rfc_bibtex = RFCBibtex(['RFC5246', 'TheDocumentery', 'draft-ietf-tls-tls13-21', 'RFC8446', 'TheChronic'])
+        rfc_bibtex = RFCBibtex(['rFc5246', 'TheDocumentery', 'DraFt-ietf-Tls-tLs13-21', 'RFC8446', 'TheChronic'])
         entries = list(rfc_bibtex.bibtex_entries)
         self.assertEqual(len(entries), 3)
-        self.assertIn("RFC5246", entries[0])
+        self.assertIn("rFc5246", entries[0])
         self.assertIn("The Transport Layer Security (TLS) Protocol Version 1.2", entries[0])
         self.assertIn("2008", entries[0])
         self.assertIn("RFC Editor", entries[0])
 
-        self.assertIn("{draft-ietf-tls-tls13-21}", entries[1])
+        self.assertIn("{DraFt-ietf-Tls-tLs13-21,", entries[1])
         self.assertIn("The Transport Layer Security (TLS) Protocol Version 1.3", entries[1])
 
         self.assertIn("RFC8446", entries[2])
