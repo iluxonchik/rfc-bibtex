@@ -6,14 +6,14 @@ with open('README.md', 'r') as fh:
 setuptools.setup(
     name='rfcbibtex',
     packages = ['rfc_bibtex'],
-    version='0.3.0',
+    version='0.3.1',
     author='Illya Gerasymchuk',
     author_email='illya@iluxonchik.me',
     description='Generate Bibtex entries for IETF RFCs and Internet Drafts.',
     long_description=long_description,
     long_description_content_type='text/markdown',
     url = 'https://github.com/iluxonchik/rfc-bibtex/',
-    download_url = 'https://github.com/iluxonchik/rfc-bibtex/archive/0.3.0.tar.gz',
+    download_url = 'https://github.com/iluxonchik/rfc-bibtex/archive/0.3.1.tar.gz',
     license = 'MIT',
     classifiers=(
         'Programming Language :: Python :: 3.6',
