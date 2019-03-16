@@ -133,7 +133,7 @@ class RFCBibtex(object):
                   'explicitly, since there may be major document differences between two draft versions.\n', file=sys.stderr)
             print_yellow('No explicit version has been defined for following draft ids:', file=sys.stderr)
             for draft_id in self._id_drafts_without_version_list:
-                print_yellow('\t* {}'.format(draft_id), file=sys.stderr)
+                print_yellow('\t* {}'.format(draft_id.lower()), file=sys.stderr)
 
     def _print_urllib_errors(self):
         if self._urllib_err_list:
@@ -149,12 +149,12 @@ class RFCBibtex(object):
         if draft_errors:
             print_yellow('The following drafts have been updated to a new draft version:', file=sys.stderr)
             for updated_entity in draft_errors:
-                print_yellow('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
+                print_yellow('\t* {} --> {}'.format(updated_entity.old_id.lower(), updated_entity.new_id), file=sys.stderr)
 
         if rfc_errors:
             print_red('The following drafts have been updated to an RFC:', file=sys.stderr)
             for updated_entity in rfc_errors:
-                print_red('\t* {} --> {}'.format(updated_entity.old_id, updated_entity.new_id), file=sys.stderr)
+                print_red('\t* {} --> {}'.format(updated_entity.old_id.lower(), updated_entity.new_id), file=sys.stderr)
 
     def generate_bibtex(self):
         if self._out_file_name is not None:
